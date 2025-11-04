@@ -14,9 +14,6 @@ env:
 jobs:
     atualiza-dockerHub:
         runs-on: ubuntu-latest
-        defaults:
-            run:
-                working-directory: ~/.
         steps:
             - name: Login
               run: |
