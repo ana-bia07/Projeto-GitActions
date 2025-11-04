@@ -16,8 +16,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Login
-              run: |
-                echo "docker build -t hello-word ."
-                echo "'${{env.DOCKER_PASSWORD}}' | docker login -u ${{env.DOCKER_USERNAME}} --password-stdin"
-                echo "docker tag hello-word ${{env.DOCKER_USERNAME}}/hello-word:vbetter"
-                echo "push ${{env.DOCKER_USERNAME}}/hello-word:vbetter"
+              run: docker build -t hello-word .
+
+            - name: Criar Imagem
+              run:  echo "${{env.DOCKER_PASSWORD}} | docker login -u ${{env.DOCKER_USERNAME}} --password-stdin"
+            - name: Nomeando Imagem
+              run:  docker tag hello-word ${{env.DOCKER_USERNAME}}/main-python:vbetter
+            - name: Push para DockerHub    
+              run: push ${{env.DOCKER_USERNAME}}/main-python:vbetter
