@@ -1,0 +1,26 @@
+name: Post e Update do Projeto
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+env: 
+    DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+    DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+    SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+
+jobs:
+    atualiza-dockerHub:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: ~/.
+        steps:
+            - name: Login
+              run: |
+                echo "docker build -t hello-word ."
+                echo "'${{env.DOCKER_PASSWORD}}' | docker login -u ${{env.DOCKER_USERNAME}} --password-stdin"
+                echo "docker tag hello-word ${{env.DOCKER_USERNAME}}/hello-word:vbetter"
+                echo "push ${{env.DOCKER_USERNAME}}/hello-word:vbetter"
