@@ -9,7 +9,7 @@ on:
 env: 
     DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
     DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-    SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+    SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEYS}}
     TAG: ${{github.sha}}
 
 jobs:
