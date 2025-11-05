@@ -50,7 +50,7 @@ jobs:
             - name: Atualiza Repo
               run: |
                 cd k8s 
-                sed -i "s|image: .*$|image: ${{ env.DOCKER_USERNAME }}/main-python:${{ env.TAG }}|" deployment.yaml
+                sed -i "s|image: .*$|image: ${{ env.DOCKER_USERNAME }}/main-python:${{ env.TAG }}|" main-python.yaml
                 git config user.name github-actions[bot]
                 git config user.email 41898282+github-actions[bot]@users.noreply.github.com
                 git add main-python.yaml
