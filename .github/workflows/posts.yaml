@@ -46,6 +46,7 @@ jobs:
               uses: actions/checkout@v4
               with:
                 repository: ana-bia07/hello-manifests
+                ssh-key: ${{env.SSH_PRIVATE_KEY}}
             - name: Atualiza Repo
               run: |
                 cd k8s 
