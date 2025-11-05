@@ -9,7 +9,6 @@ on:
 env: 
     DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
     DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-    SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEYS}}
     TAG: ${{github.sha}}
 
 jobs:
@@ -36,6 +35,8 @@ jobs:
     atualiza-manifest:
         runs-on: ubuntu-latest
         needs: atualiza-dockerhub
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
         steps:
             - name: Configurar SSH Agent
               uses: webfactory/ssh-agent@v0.9.0
@@ -52,6 +53,6 @@ jobs:
                 sed -i "s|image: .*$|image: ${{ env.DOCKER_USERNAME }}/main-python:${{ env.TAG }}|" deployment.yaml
                 git config user.name github-actions[bot]
                 git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-                git add app.deployment.yaml
+                git add main-python.yaml
                 git commit -m "chore(gitops): atualiza imagem para mais recente"
                 git push

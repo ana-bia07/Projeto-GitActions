@@ -8,3 +8,13 @@
 2. testar com comando: docker build -t hello-word .
 3. testar local: docker run -d -p 8081:80 --name fastapi-teste hello-word:latest
 4. docker ps pra ver se ta rodando e http://localhost:8081/
+
+1. cria o deploy e add no reopsitorio semarado chamado hello-manifests
+
+1. mesmo esquema do outro argo.
+2. cria namespace
+3. baixa argo
+4. baixa cli
+5. pega a senha
+6. abre o tunel
+7. entra em localhost:8080 e login
