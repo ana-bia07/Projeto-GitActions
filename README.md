@@ -131,8 +131,8 @@ De um ctrl + c na powershell antiga e execute:
 kubectl port-forward svc/app-fastapi 8080:8080
 ```
 Acesse [localhost://8080](http://localhost:8080)
-
-![imagens](imagens.concluido.png)
+![imagem](imagens/primeira.png)
+![imagens](imagens/concluido.png)
 
 ---
 
