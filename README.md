@@ -113,7 +113,7 @@ Em outro terminal (deixe esse primeiro aberto), vamos pegar a senha para fazer o
 Acesse: [localhost://8080](http://localhost:8080)
 Usuario: admin
 Senha: Cole a senha exibida no terminal
-![argo](imagens/argologin.pgn)
+![argo](imagens/argologin.png)
 
 - Vamos criar uma aplicação com nosso repositorio hello-manifests:
 ![argo](imagens/config-parte1.png)
@@ -132,6 +132,7 @@ kubectl port-forward svc/app-fastapi 8080:8080
 ```
 Acesse [localhost://8080](http://localhost:8080)
 ![imagem](imagens/primeira.png)
+Acesse [localhost://8080/saudacao/seunome]
 ![imagens](imagens/concluido.png)
 
 ---
