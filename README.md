@@ -1,15 +1,8 @@
 # Projeto CI/CD  
-<<<<<<< HEAD
 ![badge](https://img.shields.io/badge/Git-%23F05032?style=for-the-badge&logo=git&logoColor=white&logoSize=auto)  
 ![GITHUBACTIONS](https://img.shields.io/badge/githubactions-%232088FF?style=for-the-badge&logo=githubactions&logoColor=white&logoSize=auto)  
 ![RANCHER](https://img.shields.io/badge/rancher-%230075A8?style=for-the-badge&logo=rancher&logoColor=white)  
 ![ARGOCD](https://img.shields.io/badge/argocd-%23EF7B4D?style=for-the-badge&logo=argo&logoColor=white)  
-=======
-![badge](https://img.shields.io/badge/Git-%23F05032?style=for-the-badge&logo=git&logoColor=white&logoSize=auto)
-![GITHUBACTIONS](https://img.shields.io/badge/githubactions-%232088FF?style=for-the-badge&logo=githubactions&logoColor=white&logoSize=auto)
-![RANCHER](https://img.shields.io/badge/rancher-%230075A8?style=for-the-badge&logo=rancher&logoColor=white)
-![ARGOCD](https://img.shields.io/badge/argocd-%23EF7B4D?style=for-the-badge&logo=argo&logoColor=white)
->>>>>>> 81fd3511e0c6dabc901be096b4324dfd5904eec5
 ![KUBERNETES](https://img.shields.io/badge/kubernetes-%23326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 
 Esse projeto tem o objetivo de automatizar um ciclo completo de desenvolvimento. Utilizando uma aplicação **FastAPI** simples, **GitHub Actions**, **DockerHub** e **ArgoCD**, teremos um ciclo de entrega contínua (CI/CD).
