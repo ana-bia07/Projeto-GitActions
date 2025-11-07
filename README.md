@@ -194,10 +194,8 @@ kubectl port-forward svc/app-fastapi 8080:8080
 
 Acesse [http://localhost:8080](http://localhost:8080)  
 ![imagem](imagens/primeira.png)  
-<<<<<<< HEAD
-=======
+
 Acessando http://localhost:8080/saudacao/{nome}
->>>>>>> 81fd3511e0c6dabc901be096b4324dfd5904eec5
 ![imagens](imagens/concluido.png)
 
 ---
